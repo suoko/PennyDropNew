@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">PennyDropNew</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="game_fragment">Game Fragment</string>
+    <string name="pick_player_fragment">Pick Player Fragment</string>
+    <string name="play">Play</string>
+    <string name="player_name">Player Name</string>
+    <string name="roll">Roll</string>
+    <string name="or">OR</string>
+    <string name="pass">Pass</string>
+    <string name="coin_icon">coin</string>
+</resources>

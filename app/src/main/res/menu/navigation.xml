@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:title="Players"
+        android:id="@+id/pickPlayerFragment"
+        android:icon="@drawable/ic_android_black_24dp"
+        >
+    </item>
+    <item
+        android:title="Game"
+        android:id="@+id/gameFragment"
+        android:icon="@drawable/ic_six_sided_dice">
+
+    </item>
+
+</menu>
