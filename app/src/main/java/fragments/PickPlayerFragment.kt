@@ -7,16 +7,19 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.CheckBox
 import androidx.core.view.isVisible
+import androidx.fragment.app.activityViewModels
+import androidx.navigation.fragment.findNavController
 import com.example.pennydropnew.R
 import com.example.pennydropnew.databinding.FragmentPickPlayerBinding
+import com.example.pennydropnew.viewmodels.GameViewModel
+import com.example.pennydropnew.viewmodels.PickPlayersViewModel
+
 /*import com.example.pennydropnew.databinding.FragmentPickPlayerBindingImpl*/
 
 
 class PickPlayerFragment : Fragment() {
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
 
+    /*
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -24,9 +27,40 @@ class PickPlayerFragment : Fragment() {
         val binding = FragmentPickPlayerBinding
             .inflate(inflater,container, false)
             return binding.root
+}*/
+
+    private val pickPlayersViewModel
+            by activityViewModels<PickPlayersViewModel>()
+    private val gameViewModel
+            by activityViewModels<GameViewModel>()
+
+    override fun onCreateView(
+        inflater: LayoutInflater, container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
+        val binding = FragmentPickPlayerBinding
+            .inflate(inflater, container, false)
+            .apply {
+                this.vm = pickPlayersViewModel
+
+                this.buttonPlayGame.setOnClickListener {
+                    gameViewModel.startGame(
+                        pickPlayersViewModel.players.value  //since players is actually LiveData, we need to use pickPlayersViewModel.players.value to get out the List<NewPlayer>.
+                            ?.filter { newPlayer ->
+                                newPlayer.isIncluded.get() // filter each NewPlayer instance to make sure isIncluded is true
+                            }?.map { newPlayer ->
+                                newPlayer.toPlayer()  //convert each NewPlayer to a Player instance via the toPlayer function
+                            } ?: emptyList()
+                    )
+                    findNavController().navigate(R.id.gameFragment) //grab the current NavController then navigate to the GameFragment via ID
+                }
+            }
 
 
+        return binding.root
+    }
 }
+
     // Inflate the layout for this fragment
     /*return inflater.inflate(
         R.layout.fragment_pick_player,
@@ -68,4 +102,3 @@ class PickPlayerFragment : Fragment() {
                 }
             }
     }*/
-}

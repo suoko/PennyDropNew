@@ -2,6 +2,7 @@ buildscript {
 
     ext {
         nav_version = '2.3.3'
+        lc_version = '2.3.0'
     }
 }
 
@@ -17,7 +18,7 @@ android {
 
     defaultConfig {
         applicationId "com.example.pennydropnew"
-        minSdk 21
+        minSdk 23
         targetSdk 31
         versionCode 1
         versionName "1.0"
@@ -57,5 +58,11 @@ dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation "androidx.navigation:navigation-fragment-ktx:$nav_version"
     implementation "androidx.navigation:navigation-ui-ktx:$nav_version"
-    kapt "androidx.lifecycle:lifecycle-compiler:2.0.0"
+    implementation "androidx.lifecycle:lifecycle-livedata-ktx:$lc_version"
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$lc_version"
+    /*kapt "androidx.lifecycle:lifecycle-compiler:2.0.0"
+    implementation "android.arch.lifecycle:extensions:1.1.1"
+    annotationProcessor "android.arch.lifecycle:compiler:1.1.1"*/
+
+
 }

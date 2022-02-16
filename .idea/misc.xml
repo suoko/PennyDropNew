@@ -3,12 +3,16 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="app/src/main/res/drawable/ai_toggle_bg.xml" value="0.175" />
+        <entry key="app/src/main/res/drawable/ai_toggle_color.xml" value="0.183" />
         <entry key="app/src/main/res/drawable/ic_baseline_play_arrow_24.xml" value="0.1685" />
         <entry key="app/src/main/res/drawable/ic_circle_usd.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/ic_right_arrow.xml" value="0.145" />
         <entry key="app/src/main/res/drawable/ic_six_sided_dice.xml" value="0.145" />
+        <entry key="app/src/main/res/drawable/ic_smart_toy_black_24dp.xml" value="0.175" />
+        <entry key="app/src/main/res/layout-v23/player_list_item.xml" value="0.17426545086119555" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.1" />
-        <entry key="app/src/main/res/layout/fragment_game.xml" value="0.27807971014492755" />
+        <entry key="app/src/main/res/layout/fragment_game.xml" value="0.25" />
         <entry key="app/src/main/res/layout/fragment_pick_player.xml" value="0.1" />
         <entry key="app/src/main/res/layout/layout_coin_slot.xml" value="0.254981884057971" />
         <entry key="app/src/main/res/layout/player_list_item.xml" value="0.1" />

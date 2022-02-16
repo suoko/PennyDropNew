@@ -10,4 +10,6 @@
     <string name="or">OR</string>
     <string name="pass">Pass</string>
     <string name="coin_icon">coin</string>
+    <string name="coins_left">coin(s) left</string>
+    <string name="na">Not Available</string>
 </resources>
