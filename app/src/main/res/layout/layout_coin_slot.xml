@@ -21,6 +21,7 @@
         android:minWidth="36dp"
         android:minHeight="36dp"
         android:src="@drawable/ic_bitcoin"
+        app:isHidden="@{!slot.canBeFilled || !slot.isFilled}"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -48,3 +49,8 @@
         tools:text="3" />
 </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
+
+<!--
+imageview
+        app:tint="@{slot.lastRolled ? @color/colorPrimary : @android:color/black}"
+-->

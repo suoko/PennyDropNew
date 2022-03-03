@@ -135,6 +135,7 @@ app:layout_constraintTop_toBottomOf="@id/layoutCoinSlots"                app:lay
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="3"
+                    android:drawableTint="@android:color/white"
                     android:background=
                         "@{vm.canPass ? @color/colorPrimary : @color/plainGray}"
                     android:drawableEnd="@drawable/ic_right_arrow"

@@ -72,7 +72,8 @@
             android:visibility="@{player.canBeToggled ? View.VISIBLE : View.INVISIBLE}"
             android:thumb="@drawable/ai_toggle_bg"
             android:thumbTint="@color/ai_toggle_color"
-            android:trackTint="@color/ai_toggle_color"/>
+            android:trackTint="@color/ai_toggle_color"
+            android:theme="@style/SwitchStyle"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
